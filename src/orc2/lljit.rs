@@ -38,6 +38,7 @@ extern "C" {
     pub fn LLVMOrcLLJITGetMainJITDylib(J: LLVMOrcLLJITRef) -> LLVMOrcJITDylibRef;
     pub fn LLVMOrcLLJITGetTripleString(J: LLVMOrcLLJITRef) -> *const ::libc::c_char;
     pub fn LLVMOrcLLJITGetGlobalPrefix(J: LLVMOrcLLJITRef) -> ::libc::c_char;
+    pub fn LLVMOrcLLJITGetObjLinkingLayer(J: LLVMOrcLLJITRef) -> LLVMOrcObjectLayerRef;
     pub fn LLVMOrcLLJITMangleAndIntern(
         J: LLVMOrcLLJITRef,
         UnmangledName: *const ::libc::c_char,
